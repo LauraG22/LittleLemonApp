@@ -1,38 +1,137 @@
-.App {
+button {
+  background-color: #f4ce14;
+  position: relative;
+  display: inline-flex;
+  flex: 0 0 auto;
+  flex-direction: row;
+  justify-content: center;
+  align-self: center;
+  padding: 0.75rem 1.25rem;
+
   text-align: center;
+  margin: 0.125rem;
+  border: none;
+}
+nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  width: 100%;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+nav.logo {
+  display: inline-block;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.logo img {
+  width: 175px;
+  vertical-align: middle;
+}
+ul {
+  display: flex;
+  list-style: none;
+}
+nav li {
+  display: flex;
+  display: inline-block;
+  padding: 10px 15px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+nav a {
+  text-decoration: none;
+  color: black;
+  font-size: large;
+}
+
+header {
+  display: flex;
+  width: 100%;
+  flex-direction: row-reverse;
+  justify-content: space-around;
+  align-items: flex-start;
+  margin-top: 30px;
+}
+
+#banner {
+  background-color: #495e57;
+  width: 100%;
+  height: 300px;
+  position: absolute;
+  top: 70px;
+  z-index: -1;
+}
+header p {
+  margin-top: 5px;
+  margin-bottom: 10px;
+}
+header img {
+  display: flex;
+  height: auto;
+  width: 200px;
+}
+
+main {
   display: flex;
   flex-direction: column;
+  width: 100%;
+  flex-wrap: nowrap;
   align-items: center;
+}
+main .menuitems {
+  display: flex;
+  flex-direction: row;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+
+  align-items: flex-start;
+  margin: 10px 0px;
+}
+main img {
+  display: flex;
+  height: auto;
+  width: 100px;
+}
+.card {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  list-style: none;
+
+  padding: 0;
+  border: lightslategrey;
+  width: 200px;
+}
+.card h2 {
+  margin: 0;
+  font-size: x-large;
+  color: #f4ce14;
+  width: 100%;
+}
+main .action {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 640px;
+  margin-top: 30px;
+}
+footer {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: center;
+  margin: 20px;
+}
+h2,
+h3,
+p {
+  margin: 0;
 }
 
-.App-link {
-  color: #61dafb;
+footer ul {
+  width: 200px;
+  align-items: flex-start;
+  flex-direction: column;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+footer p {
+  text-decoration: none;
 }

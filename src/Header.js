@@ -1,8 +1,19 @@
-import logo from "./Logo.svg";
+import HeaderImage from "./HeaderImage.jpg";
 export default function Header(props) {
   return (
     <header>
-      <img src={logo}></img>
+      <div id="banner"></div>
+
+      <img src={HeaderImage}></img>
+      <div class="card">
+        <h2>Little Lemon</h2>
+        <h3>Chicago</h3>
+        <p>
+          We are a family owned Mediteranian restaurant, focused on traditional
+          receipes with a modern twist.
+        </p>
+        <button>Reserve a Table</button>
+      </div>
     </header>
   );
 }

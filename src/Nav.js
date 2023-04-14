@@ -1,6 +1,10 @@
+import logo from "./Logo.svg";
 export default function Nav() {
   return (
     <nav>
+      <a href="#" className="logo">
+        <img src={logo}></img>
+      </a>
       <ul>
         <li>
           <a href="#">Home</a>

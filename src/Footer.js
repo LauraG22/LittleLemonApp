@@ -21,18 +21,34 @@ export default function Footer() {
           <a href="#">Log In</a>
         </li>
       </ul>
-      <div>
-        <h3>Contact Info</h3>
-        <p>Address</p>
-        <p>Phone Number</p>
-        <p>Email</p>
-      </div>
-      <div>
-        <h3>Social Media</h3>
-        <p>Facebook</p>
-        <p>Twitter</p>
-        <p>Instagram</p>
-      </div>
+      <ul>
+        <li>
+          <h3>Contact Info</h3>
+        </li>
+        <li>
+          <p>Address</p>
+        </li>
+        <li>
+          <p>Phone Number</p>
+        </li>
+        <li>
+          <p>Email</p>
+        </li>
+      </ul>
+      <ul>
+        <li>
+          <h3>Social Media</h3>
+        </li>
+        <li>
+          <p>Facebook</p>
+        </li>
+        <li>
+          <p>Twitter</p>
+        </li>
+        <li>
+          <p>Instagram</p>
+        </li>
+      </ul>
     </footer>
   );
 }
