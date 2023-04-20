@@ -1,6 +1,12 @@
+import logo from "./Logo.svg";
+
 export default function Footer() {
   return (
     <footer>
+      <a href="#" className="logo">
+        <img src={logo}></img>
+      </a>
+      ;
       <ul>
         <li>
           <a href="#">Home</a>

@@ -1,10 +1,10 @@
-import HeaderImage from "./HeaderImage.jpg";
+import foodPic from "./restaurantFood.jpg";
 export default function Header(props) {
   return (
     <header>
       <div id="banner"></div>
 
-      <img src={HeaderImage}></img>
+      <img src={foodPic}></img>
       <div class="card">
         <h2>Little Lemon</h2>
         <h3>Chicago</h3>

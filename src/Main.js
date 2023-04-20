@@ -1,6 +1,6 @@
-import GreekSalad from "./GreekSalad.jpg";
-import Bruschetta from "./Bruschetta.jpg";
-import LemonDessert from "./LemonDessert.jpg";
+import GreekSalad from "./greeksalad2.jpg";
+import Bruschetta from "./bruschetta.svg";
+import LemonDessert from "./lemondessert3.jpg";
 export default function Main() {
   return (
     <main>
@@ -10,9 +10,8 @@ export default function Main() {
       </span>
       <div class="menuitems">
         <div className="card">
-          <a href="#" className="GreekSalad">
-            <img src={GreekSalad}></img>
-          </a>
+          <img src={GreekSalad}></img>
+
           <div className="container">
             <h4>
               <b>Greek Salad</b>
@@ -27,9 +26,8 @@ export default function Main() {
           </div>
         </div>
         <div className="card">
-          <a href="#" className="Bruschetta">
-            <img src={Bruschetta}></img>
-          </a>
+          <img src={Bruschetta}></img>
+
           <div className="container">
             <h4>
               <b>Bruschetta</b>
@@ -43,9 +41,8 @@ export default function Main() {
           </div>
         </div>
         <div className="card">
-          <a href="#" className="LemonDessert">
-            <img src={LemonDessert}></img>
-          </a>
+          <img src={LemonDessert}></img>
+
           <div className="container">
             <h4>
               <b>Lemon Dessert</b>
