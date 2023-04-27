@@ -5,7 +5,7 @@ export default function Header(props) {
       <div id="banner"></div>
 
       <img src={foodPic}></img>
-      <div class="card">
+      <div className="card">
         <h2>Little Lemon</h2>
         <h3>Chicago</h3>
         <p>

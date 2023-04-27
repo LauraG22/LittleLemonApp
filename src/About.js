@@ -4,7 +4,7 @@ export default function About() {
   return (
     <div id="about">
       <img src={Mario}></img>
-      <div class="card">
+      <div className="card">
         <h2>Little Lemon</h2>
         <h3>Chicago</h3>
         <p>

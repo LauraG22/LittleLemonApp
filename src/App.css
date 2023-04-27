@@ -13,16 +13,32 @@ button {
   border: none;
   border-radius: 16px;
 }
+h2 {
+  font-size: xx-large;
+  @media (min-width: 64em) {
+    font-size: 2em;
+  }
+}
+h3 {
+  font-size: 1.5em;
+}
+
 nav {
+  flex-direction: column;
+  align-items: center;
   display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  width: 100%;
+
+  @media (min-width: 64em) {
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 100%;
+  }
 }
 
 nav.logo {
   display: inline-block;
+  margin-top: 20px;
 }
 
 .logo img {
@@ -32,6 +48,10 @@ nav.logo {
 ul {
   display: flex;
   list-style: none;
+  flex-direction: column;
+  @media (min-width: 48em) {
+    flex-direction: row;
+  }
 }
 nav li {
   display: flex;
@@ -40,150 +60,276 @@ nav li {
 }
 
 nav a {
+  color: white;
   text-decoration: none;
-  color: black;
-  font-size: large;
+  font-size: xx-large;
+  @media (min-width: 48em) {
+    font-size: x-large;
+  }
+  @media (min-width: 64em) {
+    color: black;
+    font-size: large;
+  }
 }
 
 header {
   display: flex;
-  width: 100%;
-  flex-direction: row-reverse;
-  justify-content: space-around;
-  align-items: flex-start;
-  margin-top: 30px;
-  margin-bottom: 50px;
+  flex-direction: column-reverse;
+  align-items: center;
+
+  @media (min-width: 64em) {
+    display: flex;
+    width: 100%;
+    flex-direction: row-reverse;
+    justify-content: space-around;
+    align-items: flex-start;
+
+    margin-bottom: 50px;
+  }
 }
 
 #banner {
   background-color: #495e57;
   width: 100%;
-  height: 238px;
+  height: 800px;
   position: absolute;
   top: 70px;
   z-index: -1;
+  @media (min-width: 48em) {
+    height: 400px;
+  }
+  @media (min-width: 64em) {
+    height: 260px;
+  }
 }
 header p {
-  margin-top: 5px;
-  margin-bottom: 10px;
+  width: 75%;
   color: white;
+  margin-bottom: 15px;
+  @media (min-width: 64em) {
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
 }
 header h3 {
+  font-size: xx-large;
   color: white;
+  @media (min-width: 64em) {
+    font-size: x-large;
+  }
 }
 header img {
   display: flex;
-  height: 240px;
-  width: 200px;
+  height: 260px;
+  width: 230px;
   border-radius: 16px;
+  margin-top: 10px;
 }
 
 main {
   display: flex;
   flex-direction: column;
-  width: 100%;
-  flex-wrap: nowrap;
-  align-items: center;
+  @media (min-width: 64em) {
+    display: flex;
+
+    width: 50%;
+    flex-wrap: nowrap;
+    align-items: center;
+  }
 }
+
 main .menuitems {
   display: flex;
-  flex-direction: row;
-  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  @media (min-width: 64em) {
+    flex-direction: row;
+    justify-content: center;
 
-  align-items: flex-start;
-  margin: 10px 0px;
+    align-items: flex-start;
+    margin: 10px 0px;
+  }
 }
 main img {
   display: flex;
   height: auto;
-  width: 100px;
+  height: 133px;
   border-top-left-radius: 16px;
   border-top-right-radius: 16px;
 }
 main .card {
+  display: flex;
+  margin: 20px 0px;
   background-color: #edefee;
-  min-height: 400px;
   border-top-left-radius: 16px;
   border-top-right-radius: 16px;
+  @media (min-width: 48em) {
+    width: 40%;
+  }
+  @media (min-width: 64em) {
+    min-height: 427px;
+    margin: 0px 10px;
+    width: 200px;
+    justify-content: space-between;
+  }
 }
 .card {
   display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  list-style: none;
-  padding: 0;
-  border: lightslategrey;
-  width: 200px;
-  margin: 0px 5px;
+  flex-direction: column;
+  align-items: center;
+
+  font-size: large;
+  @media (min-width: 64em) {
+    flex-direction: row;
+    flex-wrap: wrap;
+    list-style: none;
+    padding: 0;
+    border: lightslategrey;
+    width: 255px;
+    font-size: medium;
+
+    margin: 10px 0px;
+    align-content: flex-start;
+  }
 }
+
 .card img {
   width: 100%;
 }
 .card h2 {
   margin: 0;
-  font-size: x-large;
+  font-size: xxx-large;
   color: #f4ce14;
   width: 100%;
+  text-align: center;
+  @media (min-width: 64em) {
+    text-align: left;
+    font-size: xx-large;
+  }
 }
 .container {
   padding: 0px 10px;
 }
-main .action {
+#menuItem {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  width: 640px;
-  margin-top: 30px;
 }
+#price {
+  color: darkred;
+}
+main .action {
+  display: flex;
+  flex-direction: column;
+  margin-top: 10px;
+  align-items: center;
+  margin-top: 20px;
+  @media (min-width: 64em) {
+    flex-direction: row;
+    justify-content: space-between;
+    width: 640px;
+    margin-top: 30px;
+  }
+}
+
 #testimonials {
   display: flex;
   flex-direction: column;
-  width: 100%;
-  flex-wrap: nowrap;
   align-items: center;
-  margin-top: 60px;
+  @media (min-width: 64em) {
+    display: flex;
+    align-items: flex-start;
+    width: 100%;
+    flex-wrap: nowrap;
+
+    margin: 75px;
+  }
 }
+
 #testimonials h2 {
   display: flex;
   align-items: flex-start;
+  margin-bottom: 20px;
+  @media (min-width: 64em) {
+    margin-bottom: 0px;
+  }
 }
 #testimonials .testimonials {
   display: flex;
-  min-height: 400px;
+  flex-direction: column;
+  @media (min-width: 64em) {
+    min-height: 100px;
+    align-items: center;
+    margin-top: 20px;
+    flex-direction: row;
+  }
+}
+#cardHeading {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  width: 100%;
 }
 #testimonials .card {
-  background-color: #edefee;
-  max-height: 200px;
+  display: flex;
+  background-color: white;
+
+  box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+
+  min-height: 232px;
+  padding: 10px;
 }
 #testimonials img {
   height: 120px;
   width: 90px;
 }
+#testimonials span {
+  display: flex;
+  flex-direction: column;
+}
 #about {
   display: flex;
-  flex-direction: row-reverse;
-  width: 100%;
-  flex-wrap: nowrap;
+  flex-direction: column;
+  margin: 50px 0px;
   align-items: center;
-  justify-content: space-around;
-  margin: 40px;
+
+  @media (min-width: 64em) {
+    display: flex;
+    flex-direction: row-reverse;
+    width: 100%;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: space-around;
+    margin: 60px;
+  }
+}
+#about p {
+  margin-top: 10px;
 }
 #about img {
   display: flex;
   height: auto;
   width: 200px;
   border-radius: 16px;
+
+  @media (min-width: 64em) {
+    margin-left: 0px;
+  }
 }
 footer {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   width: 100%;
   justify-content: center;
   margin: 20px;
   background: #fbdabb;
   color: #495e57;
   padding: 10px;
+  @media (min-width: 48em) {
+    flex-direction: row;
+  }
 }
+
 h2,
 h3,
 p {
