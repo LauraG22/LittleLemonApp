@@ -1,4 +1,5 @@
 import foodPic from "./restaurantFood.jpg";
+import { Link } from "react-router-dom";
 export default function Header(props) {
   return (
     <header>
@@ -12,7 +13,9 @@ export default function Header(props) {
           We are a family owned Mediteranian restaurant, focused on traditional
           receipes with a modern twist.
         </p>
-        <button>Reserve a Table</button>
+        <button>
+          <Link to="/booking">Reserve a Table</Link>
+        </button>
       </div>
     </header>
   );
