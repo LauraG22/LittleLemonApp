@@ -28,7 +28,10 @@ export default function BookingForm(props) {
   }
 
   return (
-    <form style={{ display: "grid", maxWidth: 200, gap: 20, margin: 25 }}>
+    <form
+      style={{ display: "grid", maxWidth: 200, gap: 20, margin: 25 }}
+      onSubmit={props.submitForm}
+    >
       <label htmlFor="res-date">Choose date</label>
       <input type="date" id="res-date" onChange={handleBookingDateChange} />
       <label htmlFor="res-time">Choose time</label>
@@ -48,6 +51,7 @@ export default function BookingForm(props) {
       <select id="occasion" onChange={handleOccasionChange}>
         <option>Birthday</option>
         <option>Anniversary</option>
+        <option>None</option>
       </select>
       <input type="submit" defaultValue="Make Your reservation" />
     </form>

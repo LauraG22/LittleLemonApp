@@ -1,17 +1,17 @@
 import BookingForm from "./BookingForm.js";
 import Header from "./Header.js";
 import Nav from "./Nav.js";
+import Api from "./api";
 import { useState, useReducer } from "react";
+import { useNavigate } from "react-router-dom";
 
 import Footer from "./Footer.js";
-const times = ["17:00", "18:00", "19:00", "20:00", "21:00"];
 function setAvailableTimes() {
-  console.log("DISPATCH CALLED");
-  return times;
+  return Api().fetchAPI(Date.now());
 }
 
 function initializeAvailableTimes() {
-  return times;
+  return Api().fetchAPI(Date.now());
 }
 
 function BookingPage() {
@@ -20,6 +20,18 @@ function BookingPage() {
     setAvailableTimes,
     initializeAvailableTimes()
   );
+  const navigate = useNavigate();
+
+  const submitForm = (e) => {
+    e.preventDefault();
+    const result = Api().submitAPI({ time: bookingTime, date: Date.now() });
+    console.log("RESULT:", result);
+    if (result) {
+      console.log("FORM DATA", bookingTime);
+      navigate("/confirmation");
+    } else {
+    }
+  };
   //console.log("INITIALIZED TIMES:", initializeAvailableTimes());
   return (
     <>
@@ -30,6 +42,7 @@ function BookingPage() {
         setBookingTime={setBookingTime}
         dispatchAvailableTimes={dispatchAvailableTimes}
         times={availableTimes}
+        submitForm={submitForm}
       />
       <Footer />
     </>

@@ -1,14 +1,14 @@
 import { render, screen } from "@testing-library/react";
 import BookingForm from "./BookingForm";
-import { useState, useReducer } from "react";
 
-const times = ["03:00"];
+import Api from "./api.js";
+
 function setAvailableTimes() {
-  return times;
+  return initializeAvailableTimes();
 }
 
 function initializeAvailableTimes() {
-  return times;
+  return Api().fetchAPI(Date.now());
 }
 
 test("Renders the BookingForm heading", () => {
@@ -22,11 +22,9 @@ test("Renders available times", () => {
   render(
     <BookingForm
       bookingTime={""}
-      setBookingTime={setBookingTime}
+      setBookingTime={initializeAvailableTimes}
       times={setAvailableTimes()}
     />
   );
-  const timeSelect = screen.getByLabelText("Choose time");
-  expect(timeSelect).toBeInTheDocument("03:00");
-  console.log(timeSelect);
+  expect(screen.getAllByRole("option").length).toBeGreaterThan(0);
 });
