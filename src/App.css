@@ -71,7 +71,6 @@ nav a {
     font-size: x-large;
   }
   @media (min-width: 64em) {
-    color: black;
     font-size: large;
   }
 }
