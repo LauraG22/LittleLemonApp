@@ -6,7 +6,7 @@ export default function Main() {
     <main>
       <span className="action">
         <h2>This week's specials!</h2>
-        <button>Online Menu</button>
+        <button aria-label="menu">Online Menu</button>
       </span>
       <div className="menuitems">
         <div className="card">

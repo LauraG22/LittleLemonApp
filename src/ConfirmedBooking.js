@@ -8,7 +8,7 @@ export default function ConfirmedBooking() {
       <Nav />
       <Header />
       <main>
-        <p>
+        <p id="confirmation">
           Your table reservation is confirmed. We look forward to seeing you
           soon.
         </p>

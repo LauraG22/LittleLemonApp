@@ -13,7 +13,7 @@ export default function Header(props) {
           We are a family owned Mediteranian restaurant, focused on traditional
           receipes with a modern twist.
         </p>
-        <button>
+        <button aria-label="reservation">
           <Link to="/booking">Reserve a Table</Link>
         </button>
       </div>

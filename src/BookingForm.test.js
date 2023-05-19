@@ -28,3 +28,20 @@ test("Renders available times", () => {
   );
   expect(screen.getAllByRole("option").length).toBeGreaterThan(0);
 });
+
+test("Has validation for number of guests", () => {
+  const setBookingTime = jest.fn();
+  render(
+    <BookingForm
+      bookingTime={""}
+      setBookingTime={initializeAvailableTimes}
+      times={setAvailableTimes()}
+    />
+  );
+  const guests = screen.getAllByRole("spinbutton");
+  const min = parseInt(guests[0].getAttribute("min"));
+  const max = parseInt(guests[0].getAttribute("max"));
+
+  expect(min).toBe(1);
+  expect(max).toBe(10);
+});
